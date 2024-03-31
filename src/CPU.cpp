@@ -152,7 +152,7 @@ void CPU::SBC(RAM &ram, uint16_t address)
         value = ram.readByte(address); // Reading the value from memory at the specified address
     }
 
-    // TODO: Subtracting the value from the accumulator, considering the carry flag
+    // TODO: Subtracting the accumulator from the value, considering the carry flag
     uint8_t result = 0; 
 
     // TODO: Writing the result back to memory at the same address
@@ -183,7 +183,7 @@ void CPU::LDA(RAM &ram, uint16_t address)
 void CPU::AND(RAM &ram, uint16_t address)
 {
     uint8_t value = getCachedValue(address);
-    if (value == -1)
+    if (value == 0)
     {
         value = ram.readByte(address); // Reading the value from memory at the specified address
     }
