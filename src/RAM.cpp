@@ -32,10 +32,11 @@ void RAM::writeInstructionByte(uint16_t address, uint8_t value)
 {
     
     // TODO: 
-    // First, check if the address is within the allocated memory address space. If it is not, throw an error.
+    // First, check if the address is within the allocated memory address space. If it is not, std::cerr an error.
     // Second, Check if address is within the first 256 bytes allocated for instructions. 
     // If it is, set the value in memory at that location to the value passed in as an argument
-    // Throw an error otherwise
+    // std::cerr an error otherwise
+    // Address must be in [0,256)
     // Hint: use memory.size()
         
     
@@ -45,10 +46,11 @@ void RAM::writeInstructionByte(uint16_t address, uint8_t value)
 void RAM::writeStackByte(uint16_t address, uint8_t value)
 {
     // TODO: 
-    // First, check if the address is within the allocated memory address space. If it is not, throw an error.
+    // First, check if the address is within the allocated memory address space. If it is not, std::cerr an error.
     // Second, Check if address is within the second 256 bytes allocated for the stack. 
     // If it is, set the value in memory at that location to the value passed in as an argument
-    // Throw an error otherwise
+    // std::cerr an error otherwise
+    // [256,512)
     // Hint: use memory.size()
 
     dump_memory();
@@ -57,10 +59,11 @@ void RAM::writeStackByte(uint16_t address, uint8_t value)
 void RAM::writeByte(uint16_t address, uint8_t value)
 {
     // TODO: 
-    // First, check if the address is within the allocated memory address space. If it is not, throw an error.
+    // First, check if the address is within the allocated memory address space. If it is not, std::cerr an error.
     // Second, Check if address is within the second last 1536 bytes allocated for the rest of memory. 
     // If it is, set the value in memory at that location to the value passed in as an argument
-    // Throw an error otherwise
+    // std::cerr an error otherwise
+    // Address must be in [512,memory.size())
     // Hint: use memory.size()
 
     dump_memory();
