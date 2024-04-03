@@ -152,7 +152,7 @@ void CPU::SBC(RAM &ram, uint16_t address)
         value = ram.readByte(address); // Reading the value from memory at the specified address
     }
 
-    // TODO: Subtracting the accumulator from the value, considering the carry flag
+    // TODO: Subtracting the accumulator from the value
     uint8_t result = 0; 
 
     // TODO: Writing the result back to memory at the same address
@@ -234,10 +234,11 @@ void CPU::PSH(RAM &ram)
 
 void CPU::POP(RAM &ram)
 {
+    
+
+    // TODO: Read the value from the stack at memory location SP into the accumulator (A)
+    
     // TODO: Decrement the stack pointer (SP)
-
-    // Read the value from the stack at memory location SP into the accumulator (A)
-
 
     // Displaying the operation
     std::cout << "POP instruction executed. Accumulator value popped from stack." << std::endl;
