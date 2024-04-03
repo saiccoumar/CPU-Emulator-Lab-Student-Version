@@ -1,7 +1,7 @@
 #include "CPU.h"
 #include <iostream>
 
-CacheRegister cache[3];
+CacheRegister cache[3]; // Cache Registers
 uint16_t PC;    // 16-bit Program Counter
 uint16_t SP;    // 8-bit Stack Pointer
 uint8_t A;      // 8-bit Accumulator
@@ -21,12 +21,17 @@ CPU::~CPU()
 
 void CPU::updateCache(uint16_t location, uint8_t value)
 {
+    // Cache Registers saved locations and values can be accessed via cache[index].location and cache[index].value
+    // See CPU.h for more
+
     // TODO: Implement Cache Policy when location is already in cache
     // Check if the location already exists in the cache
+    // If it does, overwrite the value at the cache register with the matching location with the new value
     
 
     // TODO: Implement Cache Policy when location is not in cache
-    // If the location doesn't exist in the cache, find the cache register with the smallest location to replace
+    // If the location doesn't exist in the cache, find the cache register with the smallest location and 
+    // replace it's location and value with the new location and values. 
     int mostRecentCacheRegister = 0;
     
 
